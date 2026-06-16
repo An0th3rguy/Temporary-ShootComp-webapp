@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4f5f0">
+<meta name="apple-mobile-web-app-title" content="ShootComp">
+<meta name="application-name" content="ShootComp">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>ShootComp</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600&family=Barlow+Condensed:wght@400;600;700&display=swap');
+
+  /* ── TOKENS ── */
+  :root {
+    --bg: #0d0f0e; --surface: #141714; --surface2: #1c1f1c;
+    --border: #2a2e2a; --accent: #c8ff00; --accent2: #ff6b2b;
+    --text: #e8ede8; --muted: #6b736b;
+    --gold: #f5c842; --silver: #a0aaa0; --bronze: #cd7f3a;
+  }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Barlow', sans-serif; font-weight: 400;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse at 20% 0%,  rgba(200,255,0,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(255,107,43,0.04) 0%, transparent 50%);
+  }
+  body.light {
+    --bg: #f4f5f0; --surface: #ffffff; --surface2: #f3f4ef;
+    --border: #d0d4c8; --accent: #4a7c00; --accent2: #d4500a;
+    --text: #1a1e1a; --muted: #5c655c;
+    --gold: #b8860b; --silver: #708070; --bronze: #9a5a20;
+    background-image:
+      radial-gradient(ellipse at 20% 0%,  rgba(74,124,0,0.06)  0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(212,80,10,0.04) 0%, transparent 50%);
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* Base scale — bump root font so all rem-based sizing grows proportionally.
+     Tuned for tablet/notebook readability. */
+  html { font-size: 118.75%; }
+
+  /* ── HEADER ── */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 4rem; padding: 0 2rem;
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+  }
+  .logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:.12em; color:var(--accent); }
+  .logo span { color: var(--text); }
+  .header-phase { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+  .header-phase .dot { display:inline-block; width:6px; height:6px; background:var(--accent); border-radius:50%; margin-right:8px; animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+
+  .theme-toggle {
+    display:flex; align-items:center; gap:6px;
+    padding:4px 10px 4px 6px; background:none;
+    border:1px solid var(--border); border-radius:20px;
+    color:var(--muted); cursor:pointer; white-space:nowrap;
+    font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+    transition: border-color .2s, color .2s;
+  }
+  .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ── TABS ── */
+  .nav-tabs { display:flex; overflow-x:auto; padding:0 2rem; background:var(--surface); border-bottom:1px solid var(--border); }
+  .tab-btn {
+    font-family:'Barlow Condensed',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--muted); background:none; border:none; border-bottom:2px solid transparent;
+    padding:.85rem 1.2rem; cursor:pointer; white-space:nowrap; transition:all .2s;
+  }
+  .tab-btn:hover { color:var(--text); }
+  .tab-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
+  .tab-btn:disabled { opacity:.3; cursor:not-allowed; }
+
+  /* ── LAYOUT ── */
+  main { max-width:1040px; margin:0 auto; padding:2rem; }
+  .section-title { font-family:'Bebas Neue',sans-serif; font-size:2.4rem; letter-spacing:.08em; color:var(--text); margin-bottom:.2rem; }
+  .section-sub { font-size:.85rem; color:var(--muted); margin-bottom:2rem; }
+
+  /* ── COMMON COMPONENTS ── */
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:1.5rem; margin-bottom:1rem; }
+  .hidden { display:none !important; }
+  .flex { display:flex; }
+  .gap-1 { gap:.5rem; }
+  .mt-2 { margin-top:1rem; }
+  .justify-between { justify-content:space-between; }
+  .align-center { align-items:center; }
+
+  /* ── INPUTS ── */
+  label { display:block; font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:.4rem; }
+  input[type="text"], input[type="number"] {
+    width:100%; background:var(--surface2); border:1px solid var(--border); border-radius:3px;
+    color:var(--text); font-family:'Barlow',sans-serif; font-size:.95rem;
+    padding:.6rem .9rem; outline:none; transition:border-color .2s;
+  }
+  input[type="text"]:focus, input[type="number"]:focus { border-color:var(--accent); }
+  input[type="number"] { -moz-appearance:textfield; }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance:none; }
+
+  /* ── BUTTONS ── */
+  .btn {
+    font-family:'Barlow Condensed',sans-serif; font-size:.85rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+    border:none; border-radius:3px; padding:.7rem 1.8rem; cursor:pointer; transition:all .15s;
+  }
+  .btn-primary { background:var(--accent); color:#0d0f0e; }
+  .btn-primary:hover { background:#d8ff20; transform:translateY(-1px); }
+  .btn-secondary { background:transparent; color:var(--text); border:1px solid var(--border); }
+  .btn-secondary:hover { border-color:var(--text); }
+  .btn-danger { background:transparent; color:var(--accent2); border:1px solid var(--accent2); }
+  .btn-danger:hover { background:var(--accent2); color:#fff; }
+  .btn-sm { padding:.45rem 1rem; font-size:.75rem; }
+
+  /* ── ALERT ── */
+  .alert { display:none; padding:.8rem 1rem; border-radius:4px; font-size:.85rem; margin-bottom:1rem; }
+  .alert.show { display:block; }
+  .alert.error { background:rgba(255,107,43,.06); border:1px solid rgba(255,107,43,.2); color:var(--accent2); }
+
+  /* ── SETUP ── */
+  .team-count-row { display:flex; align-items:flex-end; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+  .team-count-row > div { flex:0 0 auto; }
+  .teams-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+  .team-card { background:var(--surface2); border:1px solid var(--border); border-radius:4px; padding:1.2rem; }
+  .team-number { font-family:'Bebas Neue',sans-serif; font-size:.9rem; letter-spacing:.15em; color:var(--accent); margin-bottom:.8rem; }
+  .team-fields { display:flex; flex-direction:column; gap:.6rem; }
+
+  /* ── TOURNAMENT CARDS ── */
+  .tournament-card {
+    display:flex; align-items:center; gap:1rem;
+    background:var(--surface); border:1px solid var(--border); border-radius:4px;
+    padding:1.2rem 1.4rem; margin-bottom:.7rem;
+    cursor:pointer; transition:border-color .2s;
+  }
+  .tournament-card:hover, .tournament-card.active-t { border-color:var(--accent); }
+  .t-card-info { flex:1; min-width:0; }
+  .t-card-name { font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; letter-spacing:.04em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .t-card-meta { font-size:.75rem; color:var(--muted); margin-top:2px; }
+  .t-card-status { font-family:'Barlow Condensed',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; padding:2px 8px; border-radius:2px; white-space:nowrap; }
+  .t-status-setup  { background:rgba(107,115,107,.15); color:var(--muted); }
+  .t-status-active { background:rgba(200,255,0,.1);    color:var(--accent); }
+  .t-status-done   { background:rgba(245,200,66,.1);   color:var(--gold); }
+  .t-card-actions { display:flex; gap:.4rem; flex-shrink:0; }
+
+  /* ── MATCHES ── */
+  .match-card {
+    display:grid; grid-template-columns:1fr auto 1fr; gap:1rem; align-items:center;
+    background:var(--surface); border:1px solid var(--border); border-radius:4px;
+    padding:1.2rem 1.5rem; margin-bottom:.6rem; transition:border-color .2s;
+  }
+  .match-card.active { border-color:var(--accent); }
+  .match-card.done   { opacity:.7; }
+  .match-team { display:flex; flex-direction:column; gap:2px; }
+  .match-team.right { text-align:right; }
+  .match-team-name { font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; letter-spacing:.05em; }
+  .match-team-players { font-size:.75rem; color:var(--muted); }
+  .match-score-area { display:flex; align-items:center; gap:.5rem; justify-content:center; }
+  .score-input { width:3.6rem !important; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:1.6rem !important; padding:.3rem .4rem !important; letter-spacing:.08em; }
+  .score-divider { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; color:var(--muted); }
+  .match-number { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.2em; color:var(--muted); text-align:center; margin-bottom:4px; text-transform:uppercase; }
+  .match-submit-btn { display:block; margin:.6rem auto 0; }
+  .match-result-display { text-align:center; font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:.1em; color:var(--muted); }
+  .match-result-display .winner { color:var(--accent); }
+
+  /* ── PROGRESS ── */
+  .progress-text { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:.5rem; }
+  .progress-bar-wrap { background:var(--surface2); border-radius:2px; height:4px; margin-bottom:2rem; overflow:hidden; }
+  .progress-bar-fill { height:100%; background:var(--accent); border-radius:2px; transition:width .4s ease; }
+
+  /* ── FILTERS ── */
+  .filter-row { display:flex; gap:.6rem; margin-bottom:1.2rem; flex-wrap:wrap; }
+  .filter-btn {
+    font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase;
+    background:var(--surface2); border:1px solid var(--border); border-radius:2px;
+    color:var(--muted); padding:.4rem .9rem; cursor:pointer; transition:all .15s;
+  }
+  .filter-btn:hover, .filter-btn.active { border-color:var(--accent); color:var(--accent); }
+
+  /* ── STANDINGS ── */
+  .standings-table { width:100%; border-collapse:collapse; font-size:.9rem; min-width:max-content; }
+  .standings-table th {
+    font-family:'Barlow Condensed',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); padding:.6rem 1rem; text-align:left; border-bottom:1px solid var(--border);
+  }
+  .standings-table th.num { text-align:right; }
+  .standings-table td { padding:.75rem 1rem; border-bottom:1px solid var(--border); }
+  .standings-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .standings-table tr:last-child td { border-bottom:none; }
+
+  .rank-cell { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:.05em; width:40px; }
+  .rank-1 { color:var(--gold); } .rank-2 { color:var(--silver); } .rank-3 { color:var(--bronze); }
+  .team-name-cell { font-weight:600; }
+  .team-members-cell { font-size:.75rem; color:var(--muted); }
+  .pts-cell { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:.05em; color:var(--accent); text-align:right; vertical-align:middle; }
+  .pts-wrap { display:inline-flex; flex-direction:column; align-items:flex-end; gap:2px; }
+  .pts-badges { display:flex; gap:0; flex-wrap:wrap; justify-content:flex-end; }
+  .pts-badges span { margin-right:0 !important; margin-left:3px; }
+  .pts-value { line-height:1; }
+
+  /* ── CHAMPION ── */
+  .champion-banner { background:linear-gradient(135deg,rgba(245,200,66,.08),rgba(200,255,0,.05)); border:1px solid rgba(245,200,66,.3); border-radius:4px; padding:2rem; text-align:center; margin-bottom:2rem; }
+  .champion-label { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:.4rem; }
+  .champion-name { font-family:'Bebas Neue',sans-serif; font-size:3rem; letter-spacing:.1em; color:var(--gold); }
+  .champion-players { font-size:.9rem; color:var(--muted); margin-top:.3rem; }
+
+  /* ── FOCUS MODE ── */
+  .focus-mode-overlay {
+    display:none; position:fixed; inset:0; z-index:200;
+    background:var(--bg); flex-direction:column; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .focus-mode-overlay.active { display:flex; }
+  .focus-mode-overlay { overscroll-behavior:contain; }
+  .focus-header {
+    position:absolute; top:0; left:0; right:0; z-index:2;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1rem 2rem; background:var(--bg); border-bottom:1px solid var(--border); backdrop-filter:blur(12px);
+  }
+  .focus-logo { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:.12em; color:var(--accent); }
+  .focus-logo span { color:var(--text); }
+  .focus-counter { font-family:'Barlow Condensed',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+  .backup-indicator {
+    font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; padding:3px 9px; border-radius:3px; white-space:nowrap;
+  }
+  .backup-indicator.bi-ok    { color:var(--accent); background:rgba(200,255,0,.1); }
+  .backup-indicator.bi-warn  { color:var(--muted);  background:var(--surface2); }
+  .backup-indicator.bi-stale { color:#fff; background:var(--accent2); }
+  .focus-stage { display:flex; align-items:center; gap:1.5rem; width:100%; max-width:1100px; padding:0 2rem; }
+  .focus-side-card {
+    flex:0 0 220px; background:var(--surface); border:1px solid var(--border); border-radius:6px;
+    padding:1.4rem 1.2rem; opacity:.45; cursor:pointer; min-height:160px;
+    display:flex; flex-direction:column; justify-content:center; gap:.8rem; transition:opacity .2s;
+  }
+  .focus-side-card:hover { opacity:.7; }
+  .focus-side-card.next-up {
+    opacity:1; border-color:var(--accent); border-width:2px;
+    box-shadow:0 0 24px rgba(200,255,0,.12);
+  }
+  .focus-side-card.next-up .focus-side-label { color:var(--accent); }
+  .focus-side-card.empty { opacity:.15; cursor:default; pointer-events:none; }
+  .focus-side-label { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.25em; text-transform:uppercase; color:var(--muted); }
+  .focus-side-match-no { font-family:'Barlow Condensed',sans-serif; font-size:.7rem; letter-spacing:.1em; color:var(--muted); margin-bottom:.5rem; }
+  .focus-side-team { font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:.05em; line-height:1.1; }
+  .focus-side-players { font-size:.7rem; color:var(--muted); line-height:1.4; }
+  .focus-side-vs { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; letter-spacing:.2em; color:var(--border); margin:2px 0; }
+  .focus-side-score { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:.1em; color:var(--muted); margin-top:.3rem; }
+  .focus-card { flex:1; background:var(--surface); border:1px solid var(--accent); border-radius:6px; padding:2.5rem 2rem 1.8rem; text-align:center; box-shadow:0 0 60px rgba(200,255,0,.07); min-width:0; }
+  .focus-match-label { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--muted); margin-bottom:1.6rem; }
+  .focus-next-banner {
+    margin-top:1.6rem; padding-top:1.2rem; border-top:1px dashed var(--border);
+    display:flex; flex-direction:column; gap:.3rem; align-items:center;
+  }
+  .focus-next-label { font-family:'Barlow Condensed',sans-serif; font-size:.7rem; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--accent); }
+  .focus-now-label { font-family:'Barlow Condensed',sans-serif; font-size:1.15rem; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+  .focus-next-teams { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.04em; color:var(--text); }
+  .focus-next-vs { font-family:'Barlow Condensed',sans-serif; font-size:.85rem; letter-spacing:.15em; color:var(--muted); margin:0 .3rem; }
+  .focus-vs-row { display:grid; grid-template-columns:1fr auto 1fr; gap:.8rem; align-items:center; margin-bottom:2rem; }
+  .focus-team { display:flex; flex-direction:column; gap:4px; text-align:center; align-items:center; }
+  .focus-team.right { text-align:center; align-items:center; }
+  .focus-team-name { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:.06em; line-height:1; }
+  .focus-team-players { font-size:.75rem; color:var(--muted); }
+  .focus-vs { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:.2em; color:var(--border); }
+  .focus-score-row { display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1.5rem; }
+  .focus-score-input {
+    width:4.6rem !important; text-align:center;
+    font-family:'Bebas Neue',sans-serif; font-size:2.6rem !important; padding:.4rem .5rem !important; letter-spacing:.08em;
+    background:var(--surface2); border:1px solid var(--border); border-radius:4px; color:var(--text); outline:none; transition:border-color .2s; -moz-appearance:textfield;
+  }
+  .focus-score-input:focus { border-color:var(--accent); }
+  .focus-score-input::-webkit-inner-spin-button { -webkit-appearance:none; }
+  .focus-score-divider { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--muted); }
+  .focus-actions { display:flex; gap:.5rem; justify-content:center; align-items:center; }
+  .focus-arrow-btn {
+    background:var(--surface2); border:1px solid var(--border); border-radius:3px;
+    color:var(--text); font-size:1rem; width:2.2rem; height:2.2rem; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .15s;
+  }
+  .focus-arrow-btn:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
+  .focus-arrow-btn:disabled { opacity:.25; cursor:not-allowed; }
+  .focus-progress-wrap { position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--surface2); }
+  .focus-progress-fill { height:100%; background:var(--accent); transition:width .4s ease; }
+  .focus-all-done { text-align:center; }
+  .focus-all-done-icon { font-size:3rem; margin-bottom:1rem; }
+  .focus-all-done-title { font-family:'Bebas Neue',sans-serif; font-size:2.4rem; letter-spacing:.1em; color:var(--accent); margin-bottom:.5rem; }
+  .focus-all-done-sub { color:var(--muted); font-size:.9rem; margin-bottom:1.5rem; }
+
+  /* ── TEAM EDITOR BOX ── */
+  /* When a card has its editor open, flatten its bottom + remove the gap */
+  .tournament-card.editing-open {
+    border-color:var(--accent);
+    border-bottom:none;
+    border-radius:4px 4px 0 0;
+    margin-bottom:0;
+  }
+  .team-editor-box {
+    margin-bottom:.7rem;
+    border:1px solid var(--accent);
+    border-top:none;
+    border-radius:0 0 4px 4px;
+    padding:0; overflow:hidden;
+  }
+  .team-editor-head {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:1rem 1.2rem;
+    background:rgba(200,255,0,.06);
+    border-bottom:1px solid var(--border);
+  }
+  body.light .team-editor-head { background:rgba(74,124,0,.06); }
+  .team-editor-title {
+    font-family:'Barlow Condensed',sans-serif; font-size:.85rem; font-weight:700;
+    letter-spacing:.15em; text-transform:uppercase; color:var(--accent);
+  }
+  .team-editor-box .teams-grid { padding:1.2rem; }
+  /* Inner team cards: flatter so they read as items within one panel */
+  .team-editor-box .team-card {
+    background:transparent;
+    border:1px solid var(--border);
+  }
+
+  /* ── INLINE TEAM EDIT ── */
+  .te-lock-btn {
+    background:var(--surface2); border:1px solid var(--border); border-radius:3px;
+    color:var(--muted); cursor:pointer; font-size:.85rem; width:1.9rem; height:1.9rem;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .15s;
+  }
+  .te-lock-btn:hover, .te-lock-btn.te-unlocked { border-color:var(--accent); color:var(--accent); }
+  .te-value { display:block; font-size:.95rem; color:var(--text); padding:2px 4px; min-height:1.4em; }
+  .team-name-editable {
+    background:none; border:none; border-bottom:1px dashed var(--border);
+    color:var(--text); font-family:'Barlow',sans-serif; font-size:.95rem; font-weight:600;
+    padding:1px 4px; width:100%; outline:none; transition:border-color .2s;
+  }
+  .team-name-editable:focus { border-bottom-color:var(--accent); }
+
+  /* ── H2H TIE INDICATOR ── */
+  .h2h-badge {
+    display:inline-block; font-family:'Barlow Condensed',sans-serif;
+    font-size:.6rem; font-weight:700; letter-spacing:.1em;
+    background:var(--accent2); color:#fff; border-radius:2px;
+    padding:1px 5px; margin-right:6px; vertical-align:middle;
+  }
+  .win-badge {
+    display:inline-block; font-family:'Barlow Condensed',sans-serif;
+    font-size:.6rem; font-weight:700; letter-spacing:.1em;
+    background:#4a7c00; color:#fff; border-radius:2px;
+    padding:1px 5px; margin-right:6px; vertical-align:middle;
+  }
+  .undecided-badge {
+    display:inline-block; font-family:'Barlow Condensed',sans-serif;
+    font-size:.6rem; font-weight:700; letter-spacing:.1em;
+    background:#888; color:#fff; border-radius:2px;
+    padding:1px 5px; margin-right:6px; vertical-align:middle;
+  }
+  .h2h-note .undecided-badge { margin-left:0; }
+  .h2h-note .win-badge { margin-left:0; }
+  /* tied rows no longer tinted — the X badge is the indicator */
+  .standings-scroll { overflow-x:auto; }
+  .tally-col { background:rgba(200,255,0,.06); font-size:.8rem; }
+  body.light .tally-col { background:rgba(74,124,0,.06); }
+  .h2h-note {
+    font-size:.75rem; color:var(--muted); padding:.7rem 1rem;
+    border-top:1px solid var(--border); display:flex; align-items:center; gap:.5rem;
+  }
+  .h2h-note .h2h-badge { margin-left:0; }
+
+  /* ── HEADER ACTIONS + INFO ── */
+  .header-actions { display:flex; align-items:center; gap:.6rem; }
+  .info-btn {
+    background:none; border:1px solid var(--border); border-radius:50%;
+    color:var(--muted); cursor:pointer; width:2rem; height:2rem;
+    font-size:1rem; line-height:1; display:inline-flex; align-items:center; justify-content:center;
+    transition:border-color .2s, color .2s; flex-shrink:0;
+  }
+  .info-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ── ABOUT MODAL ── */
+  .about-box { max-width:420px; text-align:left; }
+  .about-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; }
+  .about-title { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.12em; color:var(--accent); }
+  .about-title span { color:var(--text); }
+  .about-desc { font-size:.9rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem; }
+  .about-rows { border-top:1px solid var(--border); margin-bottom:1.2rem; }
+  .about-row { display:flex; justify-content:space-between; padding:.6rem 0; border-bottom:1px solid var(--border); font-size:.9rem; }
+  .about-row span:first-child { color:var(--muted); }
+  .about-row span:last-child { font-weight:600; }
+  .about-update-status { font-size:.82rem; color:var(--muted); margin-top:.7rem; min-height:1.2em; }
+
+  /* ── CONFIRM MODAL ── */
+  .modal-overlay {
+    display:none; position:fixed; inset:0; z-index:300;
+    background:rgba(0,0,0,.6); align-items:center; justify-content:center; padding:1.5rem;
+    -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);
+  }
+  .modal-overlay.active { display:flex; }
+  .modal-box {
+    background:var(--surface); border:1px solid var(--border); border-radius:6px;
+    padding:1.6rem 1.6rem 1.3rem; max-width:380px; width:100%;
+    box-shadow:0 12px 48px rgba(0,0,0,.4);
+  }
+  .modal-msg { font-size:1rem; line-height:1.5; color:var(--text); margin-bottom:1.4rem; }
+  .modal-actions { display:flex; gap:.6rem; justify-content:flex-end; }
+
+  /* ── PRINT ── */
+  #printHeader { display:none; }
+  .print-title { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:.06em; color:#000; }
+  .print-date  { font-size:.95rem; color:#333; margin-bottom:1rem; }
+
+  @media print {
+    /* Hide everything except the standings view */
+    header, .nav-tabs, #view-setup, #view-matches, .focus-mode-overlay,
+    .no-print, #standingsSub, .champion-banner { display:none !important; }
+
+    body { background:#fff !important; color:#000 !important; }
+    body, body.light { --bg:#fff; --surface:#fff; --surface2:#fff; --text:#000; --muted:#444; --border:#999; }
+
+    main { max-width:none; margin:0; padding:0; }
+    #view-standings { display:block !important; }
+    #printHeader { display:block !important; margin-bottom:.5rem; }
+
+    .section-title { color:#000; }
+    .card { border:none !important; padding:0 !important; margin:0 0 1rem !important; }
+    .standings-table { font-size:11pt; }
+    .standings-table th, .standings-table td { border-bottom:1px solid #ccc !important; padding:.4rem .6rem; }
+    .standings-table tr:hover td { background:none !important; }
+    .tally-col { background:#f7f7f7 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .pts-cell { color:#000 !important; }
+    .rank-1, .rank-2, .rank-3 { color:#000 !important; }
+
+    /* Keep badge backgrounds visible in print */
+    .h2h-badge { background:#d4500a !important; color:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .win-badge { background:#4a7c00 !important; color:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .undecided-badge { background:#888 !important; color:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .h2h-note { color:#333 !important; border-top:1px solid #ccc !important; }
+
+    /* Round labels */
+    #standingsContainer > div { color:#000 !important; }
+
+    /* Prevent a team row from splitting across two pages */
+    .standings-table tr { break-inside:avoid; page-break-inside:avoid; }
+    .standings-table thead { display:table-header-group; }   /* repeat header each page */
+    .standings-table tfoot { display:table-footer-group; }
+    /* keep each standings block (label + its table) together where possible */
+    .standings-scroll { overflow:visible !important; }
+    .h2h-note { break-inside:avoid; page-break-inside:avoid; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width:780px) { .focus-side-card { display:none; } }
+  @media (max-width:600px) {
+    main { padding:1rem; }
+    .match-card { grid-template-columns:1fr; text-align:center; }
+    .match-team.right { text-align:center; }
+    .score-input { width:3rem !important; }
+    .teams-grid { grid-template-columns:1fr; }
+    /* Focus header: make everything fit on a narrow phone */
+    .focus-header { padding:.7rem 1rem; gap:.4rem; }
+    .focus-logo { display:none; }                /* hide decorative logo */
+    .focus-counter { font-size:.7rem; letter-spacing:.1em; }
+    .focus-header-actions .btn-label { display:none; }  /* icon-only buttons */
+    .focus-header-actions .btn-sm {
+      padding:0 !important; width:2.4rem !important; min-width:2.4rem !important;
+      max-width:2.4rem !important; height:2.4rem !important; box-sizing:border-box !important;
+      font-size:1.05rem !important;
+      flex:0 0 auto;
+      display:inline-flex !important; align-items:center !important; justify-content:center !important;
+    }
+    .focus-header-actions .btn-icon { display:block; line-height:1; }
+    /* the ✕ glyph has uneven side-bearing; nudge it right to visually centre */
+    .focus-header-actions button[onclick*="closeFocusMode"] .btn-icon { transform:translateX(1.5px); }
+    .backup-indicator { font-size:.62rem; padding:2px 6px; letter-spacing:.05em; }
+  }
+</style>
+</head>
+<body class="light">
+
+<header>
+  <div class="logo">SHOOT<span>COMP</span></div>
+  <div class="header-phase" id="headerPhase"><span class="dot"></span>Nastavení</div>
+  <div class="header-actions">
+    <button class="info-btn" onclick="openAbout()" title="O aplikaci" aria-label="O aplikaci">&#9432;</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <span id="themeIcon">🌙</span>
+      <span id="themeLabel">Tmavý</span>
+    </button>
+  </div>
+</header>
+
+<!-- ABOUT MODAL -->
+<div class="modal-overlay" id="aboutModal">
+  <div class="modal-box about-box">
+    <div class="about-head">
+      <div class="about-title">SHOOT<span>COMP</span></div>
+      <button class="btn btn-secondary btn-sm" onclick="closeAbout()">Zavřít</button>
+    </div>
+    <p class="about-desc">Správa střeleckých závodů – souboje, výsledky a zálohy. Funguje offline, data zůstávají ve vašem zařízení.</p>
+    <div class="about-rows">
+      <div class="about-row"><span>Verze</span><span id="aboutVersion">–</span></div>
+      <div class="about-row"><span>Poslední aktualizace</span><span id="aboutDate">–</span></div>
+      <div class="about-row"><span>Trvalé úložiště</span><span id="aboutPersist">–</span></div>
+      <div class="about-row"><span>Uložené závody</span><span id="aboutCount">–</span></div>
+    </div>
+    <div id="aboutUpdateArea">
+      <button class="btn btn-secondary btn-sm" id="aboutUpdateBtn" onclick="checkForUpdate()">Zkontrolovat aktualizace</button>
+      <div class="about-update-status" id="aboutUpdateStatus"></div>
+    </div>
+  </div>
+</div>
+
+<div class="nav-tabs">
+  <button class="tab-btn active" id="tab-setup"      onclick="switchTab('setup')">① Nastavení</button>
+  <button class="tab-btn" id="tab-matches"    onclick="switchTab('matches')"   disabled>② Souboje</button>
+  <button class="tab-btn" id="tab-standings"  onclick="switchTab('standings')" disabled>③ Výsledky</button>
+</div>
+
+<main>
+
+  <!-- CONFIRM MODAL -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal-box">
+      <div class="modal-msg" id="confirmModalMsg"></div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="confirmModalCancel">Zrušit</button>
+        <button class="btn btn-danger" id="confirmModalOk">Smazat</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETUP -->
+  <div id="view-setup">
+    <div class="flex justify-between align-center" style="margin-bottom:.3rem">
+      <div class="section-title">Závody</div>
+      <div class="flex gap-1">
+        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('importFile').click()" title="Načíst zálohu">&#8593; Import</button>
+        <button class="btn btn-primary btn-sm" onclick="showNewTournamentForm()">+ Nový závod</button>
+      </div>
+    </div>
+    <input type="file" id="importFile" accept="application/json,.json" style="display:none" onchange="importTournamentFile(this)">
+    <div class="section-sub">Vytvořte závody níže. Kliknutím jeden otevřete.</div>
+    <div id="alertSetup" class="alert error"></div>
+    <div id="tournamentCards"></div>
+
+    <div id="tournamentForm" class="card hidden" style="margin-top:1rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem;">
+        <div><label>Název závodu</label><input type="text" id="formName" placeholder="např. Jarní pohár 2026"></div>
+        <div><label>Datum</label><input type="text" id="formDate" placeholder="DD.MM.RRRR"></div>
+      </div>
+      <div class="team-count-row" style="margin-bottom:1rem;">
+        <div><label>Počet týmů</label><input type="number" id="teamCount" value="4" min="2" max="40" style="width:7rem"></div>
+        <div><label>Počet kol</label><input type="number" id="roundCount" value="1" min="1" max="20" style="width:7rem"></div>
+        <button class="btn btn-secondary btn-sm" onclick="generateTeamInputs()">Generovat týmy</button>
+      </div>
+      <div id="teamsContainer" class="teams-grid"></div>
+      <div class="mt-2 flex gap-1">
+        <button class="btn btn-primary" id="formStartBtn" onclick="startTournament()">Spustit závod →</button>
+        <button class="btn btn-secondary" onclick="hideTournamentForm()">Zrušit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATCHES -->
+  <div id="view-matches" class="hidden">
+    <div class="flex justify-between align-center" style="margin-bottom:.3rem">
+      <div class="section-title" id="matchesTitle">Matches</div>
+      <div class="flex gap-1">
+        <button class="btn btn-secondary btn-sm" onclick="addRound()">+ Přidat kolo</button>
+        <button class="btn btn-danger btn-sm" onclick="resetTournament()">Smazat</button>
+      </div>
+    </div>
+    <div class="section-sub" id="matchesSub"></div>
+    <div class="progress-text" id="progressText">0 / 0 soubojů dokončeno</div>
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
+    <div class="filter-row">
+      <button class="filter-btn active" id="filter-all"     onclick="setFilter('all')">Vše</button>
+      <button class="filter-btn"        id="filter-pending" onclick="setFilter('pending')">Čekající</button>
+      <button class="filter-btn"        id="filter-done"    onclick="setFilter('done')">Hotové</button>
+      <button class="filter-btn" onclick="openFocusMode()" style="margin-left:auto;border-color:var(--accent);color:var(--accent);">⊙ Soustředěný režim</button>
+    </div>
+    <div id="matchesContainer"></div>
+  </div>
+
+  <!-- FOCUS OVERLAY -->
+  <div class="focus-mode-overlay" id="focusOverlay">
+    <div class="focus-header">
+      <div class="focus-logo">SHOOT<span>COMP</span></div>
+      <div class="focus-counter" id="focusCounter"></div>
+      <div class="flex gap-1 align-center focus-header-actions">
+        <span id="backupIndicator" class="backup-indicator"></span>
+        <button class="btn btn-secondary btn-sm" onclick="exportTournament(activeTournamentId)" title="Záloha (export)"><span class="btn-icon">&#8595;</span><span class="btn-label"> Záloha</span></button>
+        <button class="btn btn-secondary btn-sm" onclick="closeFocusMode()" title="Ukončit režim"><span class="btn-icon">✕</span><span class="btn-label"> Ukončit režim</span></button>
+      </div>
+    </div>
+    <div id="focusContent" style="width:100%;display:flex;justify-content:center;"></div>
+    <div class="focus-progress-wrap"><div class="focus-progress-fill" id="focusProgressFill"></div></div>
+  </div>
+
+  <!-- STANDINGS -->
+  <div id="view-standings" class="hidden">
+    <div class="flex justify-between align-center" style="margin-bottom:.3rem">
+      <div class="section-title">Výsledky</div>
+      <button class="btn btn-secondary btn-sm no-print" onclick="printStandings()">🖨 Tisk / PDF</button>
+    </div>
+    <div class="section-sub" id="standingsSub">Body = celkové skóre. Řazeno podle celkového skóre.</div>
+    <!-- Print-only header (závod name + date) -->
+    <div id="printHeader"></div>
+    <div id="championBanner"></div>
+    <div id="standingsContainer"></div>
+  </div>
+
+</main>
+
+<script>
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
+let tournaments = [];
+let activeTournamentId = null;
+
+// Points to the active tournament object
+function T() { return tournaments.find(t => t.id === activeTournamentId) || null; }
+
+// Proxy so legacy code using state.X still works
+const state = {
+  get teams()         { return T()?.teams        ?? []; },
+  set teams(v)        { if (T()) T().teams = v; },
+  get matches()       { return T()?.matches      ?? []; },
+  set matches(v)      { if (T()) T().matches = v; },
+  get totalRounds()   { return T()?.totalRounds  ?? 1; },
+  set totalRounds(v)  { if (T()) T().totalRounds = v; },
+  get tournamentName(){ return T()?.name         ?? ''; },
+  get tournamentDate(){ return T()?.date         ?? ''; },
+  get phase()         { return T()?.phase        ?? 'setup'; },
+  set phase(v)        { if (T()) T().phase = v; },
+};
+
+function newId() { return 't_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
+
+let currentFilter = 'all';
+
+// ─────────────────────────────────────────────
+//  TABS
+// ─────────────────────────────────────────────
+function switchTab(tab) {
+  ['setup','matches','standings'].forEach(t => {
+    document.getElementById('view-'+t).classList.toggle('hidden', t !== tab);
+    document.getElementById('tab-'+t).classList.toggle('active', t === tab);
+  });
+  if (tab === 'standings') renderStandings();
+  if (tab === 'matches')   renderMatches();
+}
+
+function enableTabs() {
+  document.getElementById('tab-matches').disabled = false;
+  document.getElementById('tab-standings').disabled = false;
+}
+
+// ─────────────────────────────────────────────
+//  SETUP
+// ─────────────────────────────────────────────
+function generateTeamInputs(existing = []) {
+  const n = parseInt(document.getElementById('teamCount').value) || 4;
+  if (n < 2 || n > 40) { showAlert('alertSetup','Počet týmů musí být 2–40.'); return; }
+  hideAlert('alertSetup');
+  document.getElementById('teamsContainer').innerHTML = Array.from({length:n}, (_, i) => {
+    const p = existing[i] || {};
+    return `<div class="team-card">
+      <div class="team-number">Tým ${i+1}</div>
+      <div class="team-fields">
+        <div><label>Název týmu</label><input type="text" id="tname_${i}" placeholder="Tým ${i+1}" value="${esc(p.name||'')}"></div>
+        <div><label>Člen 1</label><input type="text" id="tp1_${i}"   placeholder="Jméno střelce"  value="${esc(p.p1  ||'')}"></div>
+        <div><label>Člen 2</label><input type="text" id="tp2_${i}"   placeholder="Jméno střelce"  value="${esc(p.p2  ||'')}"></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function readTeamsFromForm(n) {
+  return Array.from({length:n}, (_, i) => ({
+    name: document.getElementById(`tname_${i}`)?.value.trim() || `Tým ${i+1}`,
+    p1:   document.getElementById(`tp1_${i}`)  ?.value.trim() || 'Střelec A',
+    p2:   document.getElementById(`tp2_${i}`)  ?.value.trim() || 'Střelec B',
+  }));
+}
+
+function startTournament() {
+  const n      = parseInt(document.getElementById('teamCount').value) || 4;
+  const teams  = readTeamsFromForm(n);
+  if (teams.length < 2) { showAlert('alertSetup','Potřebujete alespoň 2 týmy.'); return; }
+
+  const rounds = Math.max(1, parseInt(document.getElementById('roundCount').value) || 1);
+  const name   = document.getElementById('formName').value.trim() || 'Závod';
+  const date   = document.getElementById('formDate').value.trim();
+
+  const editingId = document.getElementById('tournamentForm').dataset.editingId;
+  let t = editingId ? tournaments.find(x => x.id === editingId) : null;
+
+  if (t && t.phase === 'setup') {
+    Object.assign(t, {name, date, teams, totalRounds:rounds, matches:[]});
+  } else {
+    t = {id:newId(), name, date, teams, totalRounds:rounds, matches:[], phase:'matches'};
+    tournaments.push(t);
+  }
+  for (let r = 1; r <= rounds; r++) {
+    generateRoundRobin(teams.length).forEach(m => { m.round = r; t.matches.push(m); });
+  }
+  t.phase = 'matches';
+  activeTournamentId = t.id;
+
+  hideTournamentForm();
+  renderTournamentCards();
+  enableTabs();
+  saveAll();
+  switchTab('matches');
+  updateHeaderPhase('Souboje');
+}
+
+function showNewTournamentForm() {
+  const form = document.getElementById('tournamentForm');
+  form.classList.remove('hidden');
+  form.dataset.editingId = '';
+  document.getElementById('formStartBtn').textContent = 'Spustit závod →';
+  const now = new Date();
+  document.getElementById('formName').value  = '';
+  document.getElementById('formDate').value  = `${pad(now.getDate())}.${pad(now.getMonth()+1)}.${now.getFullYear()}`;
+  document.getElementById('teamCount').value = 4;
+  document.getElementById('roundCount').value = 1;
+  generateTeamInputs();
+  form.scrollIntoView({behavior:'smooth'});
+}
+
+function hideTournamentForm() {
+  document.getElementById('tournamentForm').classList.add('hidden');
+  document.getElementById('teamsContainer').innerHTML = '';
+}
+
+// ─────────────────────────────────────────────
+//  ROUND ROBIN ALGORITHM
+// ─────────────────────────────────────────────
+function generateRoundRobin(n) {
+  const size = n % 2 === 0 ? n : n + 1;
+  const rounds = [];
+  let arr = Array.from({length:size}, (_, i) => i);
+
+  for (let r = 0; r < size - 1; r++) {
+    const round = [];
+    for (let i = 0; i < size / 2; i++) {
+      const a = arr[i], b = arr[size-1-i];
+      if (a < n && b < n) round.push({a:Math.min(a,b), b:Math.max(a,b)});
+    }
+    rounds.push(round);
+    arr = [arr[0], arr[size-1], ...arr.slice(1, size-1)];
+  }
+
+  // Flatten round-by-round with per-round offset so no team starts every round
+  const schedule = [];
+  rounds.forEach((round, ri) => {
+    const offset = ri % round.length;
+    [...round.slice(offset), ...round.slice(0, offset)]
+      .forEach(m => schedule.push({...m, scoreA:'', scoreB:'', done:false}));
+  });
+
+  // Balance left/right appearances per team
+  const leftCount = new Array(n).fill(0);
+  schedule.forEach(m => leftCount[m.a]++);
+  schedule.forEach(m => {
+    if (leftCount[m.a] > leftCount[m.b] + 1) {
+      [m.a, m.b] = [m.b, m.a];
+      leftCount[m.a]++; leftCount[m.b]--;
+    }
+  });
+  return schedule;
+}
+
+// ─────────────────────────────────────────────
+//  TOURNAMENT CARD LIST
+// ─────────────────────────────────────────────
+function renderTournamentCards() {
+  const container = document.getElementById('tournamentCards');
+  if (!container) return;
+  if (!tournaments.length) {
+    container.innerHTML = '<div class="card" style="text-align:center;color:var(--muted);padding:2rem;">Zatím žádné závody. Klikněte na + Nový závod.</div>';
+    return;
+  }
+  container.innerHTML = '';
+  tournaments.forEach(t => {
+    const done  = t.matches.filter(m => m.done).length;
+    const total = t.matches.length;
+    const isActive = t.id === activeTournamentId;
+    const [statusLabel, statusClass] =
+      t.phase === 'setup'              ? ['Nastavení', 't-status-setup']  :
+      done === total && total > 0      ? ['Dokončeno', 't-status-done']   :
+                                         [`${done}/${total} soubojů`, 't-status-active'];
+
+    const card = document.createElement('div');
+    card.className = 'tournament-card' + (isActive ? ' active-t' : '');
+    card.onclick = () => openTournament(t.id);
+    card.innerHTML =
+      `<div class="t-card-info">
+        <div class="t-card-name">${esc(t.name||'Unnamed')}</div>
+        <div class="t-card-meta">${t.date||''}${t.date&&t.teams.length?' · ':''}${t.teams.length} týmů · ${t.totalRounds} ${t.totalRounds>1?'kol':'kolo'}</div>
+      </div>
+      <span class="t-card-status ${statusClass}">${statusLabel}</span>
+      <div class="t-card-actions">
+        <button class="btn btn-secondary btn-sm" data-tid="${t.id}" onclick="exportTournament(this.dataset.tid,event)" style="padding:.3rem .7rem" title="Záloha (export)">&#8595;</button>
+        <button class="btn btn-secondary btn-sm" data-tid="${t.id}" onclick="openTeamEditor(this.dataset.tid,event)" style="padding:.3rem .7rem" title="Upravit týmy">&#9998;</button>
+        <button class="btn btn-danger btn-sm"    data-tid="${t.id}" onclick="deleteTournament(this.dataset.tid,event)" style="padding:.3rem .7rem" title="Smazat">&#x2715;</button>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+function openTournament(id) {
+  const wasActive = activeTournamentId === id;
+  activeTournamentId = id;
+  const t = T();
+  if (!t) return;
+  if (!wasActive) { renderTournamentCards(); saveAll(); }
+  if (t.phase !== 'setup') { enableTabs(); switchTab('matches'); updateHeaderPhase('Souboje'); }
+  else switchTab('setup');
+}
+
+async function deleteTournament(id, e) {
+  e.stopPropagation();
+  if (!await confirmDialog('Smazat tento závod?')) return;
+  tournaments = tournaments.filter(t => t.id !== id);
+  if (activeTournamentId === id) {
+    activeTournamentId = null;
+    document.getElementById('tab-matches').disabled = true;
+    document.getElementById('tab-standings').disabled = true;
+  }
+  renderTournamentCards();
+  saveAll();
+}
+
+async function resetTournament() {
+  if (!await confirmDialog('Smazat závod? Všechny výsledky budou ztraceny.')) return;
+  tournaments = tournaments.filter(t => t.id !== activeTournamentId);
+  activeTournamentId = null;
+  document.getElementById('tab-matches').disabled = true;
+  document.getElementById('tab-standings').disabled = true;
+  renderTournamentCards();
+  saveAll();
+  switchTab('setup');
+  updateHeaderPhase('Nastavení');
+}
+
+// ─────────────────────────────────────────────
+//  MATCHES
+// ─────────────────────────────────────────────
+function renderMatches() {
+  const container = document.getElementById('matchesContainer');
+  container.innerHTML = '';
+  const matches = state.matches;
+  const total   = matches.length;
+  const done    = matches.filter(m => m.done).length;
+
+  document.getElementById('progressText').textContent = `${done} / ${total} soubojů dokončeno`;
+  document.getElementById('progressBar').style.width  = total ? `${done/total*100}%` : '0%';
+
+  const titleEl = document.getElementById('matchesTitle');
+  if (titleEl) titleEl.textContent = state.tournamentName || 'Matches';
+
+  const roundLabel = state.totalRounds > 1 ? `Kola 1–${state.totalRounds}` : 'Kolo 1';
+  document.getElementById('matchesSub').textContent =
+    (state.tournamentDate ? state.tournamentDate + ' · ' : '') +
+    `${roundLabel} · ${total} soubojů celkem. Zadejte skóre a uložte.`;
+
+  let lastRound = null;
+  matches.forEach((m, idx) => {
+    if (currentFilter === 'pending' && m.done)  return;
+    if (currentFilter === 'done'    && !m.done) return;
+
+    if (m.round !== lastRound) {
+      lastRound = m.round;
+      const div = document.createElement('div');
+      div.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0 .5rem;border-top:1px solid var(--border);margin-top:.4rem;';
+      if (m.round === 1) div.style.borderTop = 'none';
+      div.innerHTML =
+        `<span style="font-family:sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);">Kolo ${m.round}</span>
+         <button class="btn btn-danger btn-sm" onclick="deleteRound(${m.round})" style="padding:.25rem .7rem;font-size:.65rem;">&#x2715; Smazat kolo</button>`;
+      container.appendChild(div);
+    }
+
+    const ta = state.teams[m.a], tb = state.teams[m.b];
+    const card = document.createElement('div');
+    card.className = `match-card ${m.done ? 'done' : 'active'}`;
+    card.id = `match_${idx}`;
+
+    if (m.done) {
+      const aWon = m.scoreA > m.scoreB, bWon = m.scoreB > m.scoreA;
+      card.innerHTML =
+        `<div class="match-team">
+          <div class="match-team-name ${aWon?'rank-1':''}">${esc(ta.name)}</div>
+          <div class="match-team-players">${esc(ta.p1)} · ${esc(ta.p2)}</div>
+        </div>
+        <div>
+          <div class="match-number">Souboj ${idx+1}</div>
+          <div class="match-result-display">
+            <span class="${aWon?'winner':''}">${m.scoreA}</span>
+            <span style="color:var(--border)"> : </span>
+            <span class="${bWon?'winner':''}">${m.scoreB}</span>
+          </div>
+          <div style="text-align:center;margin-top:4px;">
+            <button class="btn btn-secondary btn-sm" onclick="undoMatch(${idx})">Upravit</button>
+          </div>
+        </div>
+        <div class="match-team right">
+          <div class="match-team-name ${bWon?'rank-1':''}">${esc(tb.name)}</div>
+          <div class="match-team-players">${esc(tb.p1)} · ${esc(tb.p2)}</div>
+        </div>`;
+    } else {
+      card.innerHTML =
+        `<div class="match-team">
+          <div class="match-team-name">${esc(ta.name)}</div>
+          <div class="match-team-players">${esc(ta.p1)} · ${esc(ta.p2)}</div>
+        </div>
+        <div>
+          <div class="match-number">Souboj ${idx+1}</div>
+          <div class="match-score-area">
+            <input type="number" inputmode="numeric" pattern="[0-7]" class="score-input" id="sa_${idx}" placeholder="0" min="0" max="7" oninput="filterScore(this)" value="${m.scoreA}">
+            <span class="score-divider">:</span>
+            <input type="number" inputmode="numeric" pattern="[0-7]" class="score-input" id="sb_${idx}" placeholder="0" min="0" max="7" oninput="filterScore(this)" value="${m.scoreB}">
+          </div>
+          <button class="btn btn-primary btn-sm match-submit-btn" onclick="saveMatch(${idx})">Uložit výsledek</button>
+        </div>
+        <div class="match-team right">
+          <div class="match-team-name">${esc(tb.name)}</div>
+          <div class="match-team-players">${esc(tb.p1)} · ${esc(tb.p2)}</div>
+        </div>`;
+    }
+    container.appendChild(card);
+  });
+
+  if (!container.querySelector('.match-card')) {
+    container.innerHTML += '<div class="card" style="text-align:center;color:var(--muted);padding:2rem;">Žádné souboje v tomto filtru.</div>';
+  }
+}
+
+async function saveMatch(idx) {
+  const sa = parseInt(document.getElementById(`sa_${idx}`)?.value);
+  const sb = parseInt(document.getElementById(`sb_${idx}`)?.value);
+  if (isNaN(sa) || isNaN(sb) || sa < 0 || sb < 0 || sa > 7 || sb > 7) {
+    document.getElementById(`sa_${idx}`)?.focus(); return;
+  }
+  if (sa === 7 && sb === 7) {
+    await confirmDialog('Výsledek 7:7 není možný.', 'OK');
+    document.getElementById(`sa_${idx}`)?.focus(); return;
+  }
+  Object.assign(state.matches[idx], {scoreA:sa, scoreB:sb, done:true});
+  save();
+  renderMatches();
+  if (state.matches.every(m => m.done)) { updateHeaderPhase('Dokončeno'); switchTab('standings'); }
+}
+
+function undoMatch(idx) {
+  state.matches[idx].done = false;
+  save(); renderMatches();
+}
+
+function setFilter(f) {
+  currentFilter = f;
+  ['all','pending','done'].forEach(x =>
+    document.getElementById('filter-'+x).classList.toggle('active', x === f)
+  );
+  renderMatches();
+}
+
+// ─────────────────────────────────────────────
+//  ROUNDS
+// ─────────────────────────────────────────────
+function addRound() {
+  const next = state.totalRounds + 1;
+  generateRoundRobin(state.teams.length).forEach(m => { m.round = next; state.matches.push(m); });
+  state.totalRounds = next;
+  save(); renderMatches();
+}
+
+async function deleteRound(roundNum) {
+  const roundMatches = state.matches.filter(m => m.round === roundNum);
+  const hasDone = roundMatches.some(m => m.done);
+  const msg = hasDone
+    ? `Smazat kolo ${roundNum}? Odstraní ${roundMatches.length} soubojů a výsledků.`
+    : `Smazat kolo ${roundNum}? Odstraní ${roundMatches.length} soubojů.`;
+  if (!await confirmDialog(msg)) return;
+  state.matches = state.matches.filter(m => m.round !== roundNum);
+  state.matches.forEach(m => { if (m.round > roundNum) m.round--; });
+  state.totalRounds = Math.max(1, state.totalRounds - 1);
+  save(); renderMatches();
+}
+
+// ─────────────────────────────────────────────
+//  FOCUS MODE
+// ─────────────────────────────────────────────
+let focusCursor = 0;
+
+function openFocusMode() {
+  focusCursor = state.matches.findIndex(m => !m.done);
+  if (focusCursor === -1) focusCursor = state.matches.length - 1;
+  document.getElementById('focusOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';   // lock page scroll behind overlay
+  renderFocusMatch();
+}
+
+function closeFocusMode() {
+  document.getElementById('focusOverlay').classList.remove('active');
+  document.body.style.overflow = '';          // restore page scroll
+  renderMatches();
+}
+
+function moveFocusCursor(delta) {
+  const n = focusCursor + delta;
+  if (n >= 0 && n < state.matches.length) { focusCursor = n; renderFocusMatch(); }
+}
+
+function sideCardHTML(idx, label) {
+  if (idx < 0 || idx >= state.matches.length) return '<div class="focus-side-card empty"></div>';
+  const m = state.matches[idx];
+  const ta = state.teams[m.a], tb = state.teams[m.b];
+  const isNext = label === 'DALŠÍ';
+  const dir = label === 'PŘEDCHOZÍ' ? -1 : 1;
+  return `<div class="focus-side-card${isNext ? ' next-up' : ''}" onclick="moveFocusCursor(${dir})">
+    <div>
+      <div class="focus-side-label">${label}</div>
+      <div class="focus-side-match-no">Souboj ${idx+1}</div>
+    </div>
+    <div>
+      <div class="focus-side-team">${esc(ta.name)}</div>
+      <div class="focus-side-players">${esc(ta.p1)} · ${esc(ta.p2)}</div>
+      <div class="focus-side-vs">vs</div>
+      <div class="focus-side-team">${esc(tb.name)}</div>
+      <div class="focus-side-players">${esc(tb.p1)} · ${esc(tb.p2)}</div>
+      ${m.done ? `<div class="focus-side-score">${m.scoreA} : ${m.scoreB}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderFocusMatch() {
+  const matches = state.matches;
+  const total   = matches.length;
+  const done    = matches.filter(m => m.done).length;
+
+  document.getElementById('focusCounter').textContent     = `${done} / ${total} hotovo`;
+  document.getElementById('focusProgressFill').style.width = total ? `${done/total*100}%` : '0%';
+  updateBackupIndicator();
+
+  const content = document.getElementById('focusContent');
+
+  if (done === total && total > 0) {
+    content.innerHTML = `<div class="focus-all-done">
+      <div class="focus-all-done-icon">🏆</div>
+      <div class="focus-all-done-title">Všechny souboje dokončeny!</div>
+      <div class="focus-all-done-sub">Všechny výsledky byly zadány.</div>
+      <button class="btn btn-primary" onclick="closeFocusMode();switchTab('standings')">Zobrazit výsledky →</button>
+    </div>`;
+    return;
+  }
+
+  const idx  = focusCursor;
+  const m    = matches[idx];
+  const ta   = state.teams[m.a], tb = state.teams[m.b];
+  const prev = idx > 0, next = idx < total - 1;
+  const roundSuffix = state.totalRounds > 1 ? ` · Kolo ${m.round}` : '';
+
+  // Banner showing who is up next (the match after the current one)
+  let nextBanner = '';
+  if (next) {
+    const nm = matches[idx+1];
+    const nta = state.teams[nm.a], ntb = state.teams[nm.b];
+    nextBanner = `<div class="focus-next-banner">
+      <span class="focus-next-label">Připravuje se</span>
+      <span class="focus-next-teams">${esc(nta.name)} <span class="focus-next-vs">vs</span> ${esc(ntb.name)}</span>
+    </div>`;
+  } else {
+    nextBanner = `<div class="focus-next-banner"><span class="focus-next-label">Poslední souboj</span></div>`;
+  }
+
+  let mainCard;
+  if (!m.done) {
+    mainCard = `<div class="focus-card">
+      <div class="focus-match-label">Souboj ${idx+1} z ${total}${roundSuffix}</div>
+      <div class="focus-now-label">Střílí</div>
+      <div class="focus-vs-row">
+        <div class="focus-team"><div class="focus-team-name">${esc(ta.name)}</div><div class="focus-team-players">${esc(ta.p1)}<br>${esc(ta.p2)}</div></div>
+        <div class="focus-vs">VS</div>
+        <div class="focus-team right"><div class="focus-team-name">${esc(tb.name)}</div><div class="focus-team-players">${esc(tb.p1)}<br>${esc(tb.p2)}</div></div>
+      </div>
+      <div class="focus-score-row">
+        <input type="number" inputmode="numeric" pattern="[0-7]" class="focus-score-input" id="fsa" placeholder="0" min="0" max="7" oninput="filterScore(this)" value="${m.scoreA}">
+        <span class="focus-score-divider">:</span>
+        <input type="number" inputmode="numeric" pattern="[0-7]" class="focus-score-input" id="fsb" placeholder="0" min="0" max="7" oninput="filterScore(this)" value="${m.scoreB}">
+      </div>
+      <div class="focus-actions">
+        <button class="focus-arrow-btn" onclick="moveFocusCursor(-1)" ${prev?'':'disabled'}>&#8592;</button>
+        <button class="btn btn-primary" onclick="saveFocusMatch(${idx})">Uložit</button>
+        <button class="focus-arrow-btn" onclick="moveFocusCursor(1)"  ${next?'':'disabled'}>&#8594;</button>
+      </div>
+      ${nextBanner}
+    </div>`;
+  } else {
+    const aWon = m.scoreA > m.scoreB, bWon = m.scoreB > m.scoreA;
+    mainCard = `<div class="focus-card">
+      <div class="focus-match-label">Souboj ${idx+1} z ${total}${roundSuffix} — Dokončeno</div>
+      <div class="focus-vs-row">
+        <div class="focus-team"><div class="focus-team-name" style="${aWon?'color:var(--accent)':''}">${esc(ta.name)}</div><div class="focus-team-players">${esc(ta.p1)}<br>${esc(ta.p2)}</div></div>
+        <div style="text-align:center">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;letter-spacing:.1em;color:var(--muted)">
+            <span style="${aWon?'color:var(--accent)':''}">${m.scoreA}</span>
+            <span style="color:var(--border)"> : </span>
+            <span style="${bWon?'color:var(--accent)':''}">${m.scoreB}</span>
+          </div>
+        </div>
+        <div class="focus-team right"><div class="focus-team-name" style="${bWon?'color:var(--accent)':''}">${esc(tb.name)}</div><div class="focus-team-players">${esc(tb.p1)}<br>${esc(tb.p2)}</div></div>
+      </div>
+      <div class="focus-actions">
+        <button class="focus-arrow-btn" onclick="moveFocusCursor(-1)" ${prev?'':'disabled'}>&#8592;</button>
+        <button class="btn btn-secondary" onclick="undoFocusMatch(${idx})">Upravit výsledek</button>
+        <button class="focus-arrow-btn" onclick="moveFocusCursor(1)"  ${next?'':'disabled'}>&#8594;</button>
+      </div>
+      ${nextBanner}
+    </div>`;
+  }
+
+  content.innerHTML = `<div class="focus-stage">${sideCardHTML(idx-1,'PŘEDCHOZÍ')}${mainCard}${sideCardHTML(idx+1,'DALŠÍ')}</div>`;
+
+  if (!m.done) {
+    setTimeout(() => document.getElementById('fsa')?.focus(), 50);
+    document.getElementById('fsb')?.addEventListener('keydown', e => { if (e.key==='Enter') saveFocusMatch(idx); });
+  }
+}
+
+async function saveFocusMatch(idx) {
+  const sa = parseInt(document.getElementById('fsa')?.value);
+  const sb = parseInt(document.getElementById('fsb')?.value);
+  if (isNaN(sa) || isNaN(sb) || sa < 0 || sb < 0 || sa > 7 || sb > 7) { document.getElementById('fsa')?.focus(); return; }
+  if (sa === 7 && sb === 7) { await confirmDialog('Výsledek 7:7 není možný.', 'OK'); document.getElementById('fsa')?.focus(); return; }
+  Object.assign(state.matches[idx], {scoreA:sa, scoreB:sb, done:true});
+  save();
+  const nextPending = state.matches.findIndex((m, i) => i > idx && !m.done);
+  const anyPending  = nextPending !== -1 ? nextPending : state.matches.findIndex(m => !m.done);
+  if (anyPending === -1) updateHeaderPhase('Dokončeno');
+  else focusCursor = anyPending;
+  renderFocusMatch();
+}
+
+function undoFocusMatch(idx) {
+  state.matches[idx].done = false;
+  save(); renderFocusMatch();
+}
+
+// ─────────────────────────────────────────────
+//  STANDINGS
+// ─────────────────────────────────────────────
+function calcStandings(roundFilter) {
+  const rows = state.teams.map((t, i) => ({i, name:t.name, p1:t.p1, p2:t.p2, played:0, w:0, d:0, l:0, pts:0}));
+  const done = state.matches.filter(m => m.done && (roundFilter === undefined || m.round === roundFilter));
+  done.forEach(m => {
+    const a = rows[m.a], b = rows[m.b];
+    const sa = parseInt(m.scoreA), sb = parseInt(m.scoreB);
+    a.played++; b.played++;
+    a.pts += sa; b.pts += sb;
+    if      (sa > sb) { a.w++; b.l++; }
+    else if (sb > sa) { b.w++; a.l++; }
+    else              { a.d++; b.d++; }
+  });
+
+  // Head-to-head wins of team `x` over team `y` in their direct matches
+  function h2hWins(x, y) {
+    let wins = 0;
+    done.forEach(m => {
+      if ((m.a === x && m.b === y) || (m.a === y && m.b === x)) {
+        const xs = m.a === x ? parseInt(m.scoreA) : parseInt(m.scoreB);
+        const ys = m.a === y ? parseInt(m.scoreA) : parseInt(m.scoreB);
+        if (xs > ys) wins++;
+      }
+    });
+    return wins;
+  }
+
+  // Count how many times team `x` scored exactly `value` across all their matches
+  const scoreTally = {};   // scoreTally[teamIndex] = {7:n, 6:n, ...}
+  rows.forEach(r => { scoreTally[r.i] = {}; });
+  done.forEach(m => {
+    const sa = parseInt(m.scoreA), sb = parseInt(m.scoreB);
+    scoreTally[m.a][sa] = (scoreTally[m.a][sa] || 0) + 1;
+    scoreTally[m.b][sb] = (scoreTally[m.b][sb] || 0) + 1;
+  });
+  const countOf = (teamIdx, value) => scoreTally[teamIdx][value] || 0;
+  // Attach per-value score counts to each row (for the 7×…0× columns)
+  rows.forEach(r => { r.scoreCounts = {}; for (let v = 7; v >= 0; v--) r.scoreCounts[v] = countOf(r.i, v); });
+
+  // Compare two teams by score cascade (most 7s, then 6s, ... down to 0).
+  // Returns {cmp, decidedBy}: cmp<0 means a ranks first; decidedBy is the score
+  // value that broke the tie (or null if identical all the way down).
+  function cascade(a, b) {
+    for (let v = 7; v >= 0; v--) {
+      const av = countOf(a.i, v), bv = countOf(b.i, v);
+      if (av !== bv) return { cmp: bv - av, decidedBy: v };
+    }
+    return { cmp: 0, decidedBy: null };
+  }
+
+  rows.sort((a, b) => {
+    // 1. total score
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    // 2. head-to-head wins among the two tied teams
+    const aH2H = h2hWins(a.i, b.i);
+    const bH2H = h2hWins(b.i, a.i);
+    if (bH2H !== aH2H) return bH2H - aH2H;
+    // 3. score cascade: most 7s, then 6s, ... down to 0
+    const cas = cascade(a, b);
+    if (cas.cmp !== 0) return cas.cmp;
+    // 4. fewest overall losses
+    return a.l - b.l;
+  });
+
+  // For each team tied on total score AND tied head-to-head with a neighbour,
+  // record which score value decided the order (numbered badge), or flag that
+  // the order could NOT be decided by rules 1–3 (undecided '?' badge).
+  rows.forEach(r => { r.tieDecidedBy = null; r.tiedScore = false; r.undecided = false; });
+  for (let x = 0; x < rows.length; x++) {
+    for (let y = x + 1; y < rows.length; y++) {
+      if (rows[x].pts !== rows[y].pts) continue;            // not same total score
+      rows[x].tiedScore = true; rows[y].tiedScore = true;
+      const xy = h2hWins(rows[x].i, rows[y].i);
+      const yx = h2hWins(rows[y].i, rows[x].i);
+      if (xy === yx) {                                       // also tied head-to-head
+        const cas = cascade(rows[x], rows[y]);
+        if (cas.decidedBy !== null) {
+          // score cascade decided it — record the deciding value
+          [rows[x], rows[y]].forEach(rr => {
+            if (rr.tieDecidedBy === null || cas.decidedBy > rr.tieDecidedBy) rr.tieDecidedBy = cas.decidedBy;
+          });
+        } else {
+          // tied through score, head-to-head AND the full cascade — cannot decide
+          rows[x].undecided = true; rows[y].undecided = true;
+        }
+      }
+    }
+  }
+  return rows;
+}
+
+function standingsTableHTML(rows) {
+  // Mark teams that share their total score with at least one other team —
+  // their relative order was decided by the head-to-head tiebreaker.
+  const ptsCount = {};
+  rows.forEach(r => { ptsCount[r.pts] = (ptsCount[r.pts] || 0) + 1; });
+  let hasTie = false;
+
+  const tbody = rows.map((r,i) => {
+    const rc = i===0?'rank-1':i===1?'rank-2':i===2?'rank-3':'';
+    const tied = ptsCount[r.pts] > 1;
+    if (tied) hasTie = true;
+    const badge = tied
+      ? '<span class="h2h-badge" title="Shodné skóre – pořadí určeno vzájemnými souboji">X</span>'
+        + (r.tieDecidedBy !== null ? `<span class="win-badge" title="Shodné skóre i vzájemné souboje – rozhodl počet zásahů ${r.tieDecidedBy}">${r.tieDecidedBy}</span>` : '')
+        + (r.undecided ? '<span class="undecided-badge" title="Nelze rozhodnout – týmy jsou shodné ve skóre, vzájemných soubojích i počtu 7,6,5,4,3,2,1,0">?</span>' : '')
+      : '';
+    const counts = [7,6,5,4,3,2,1,0].map(v =>
+      `<td class="num tally-col">${r.scoreCounts[v] || 0}</td>`).join('');
+    return `<tr>
+      <td class="rank-cell ${rc}">${i+1}</td>
+      <td><div class="team-name-cell">${esc(r.name)}</div><div class="team-members-cell">${esc(r.p1)}<br>${esc(r.p2)}</div></td>
+      <td class="num">${r.played}</td><td class="num">${r.w}</td>
+      <td class="num">${r.d}</td><td class="num">${r.l}</td>
+      ${counts}
+      <td class="pts-cell"><div class="pts-wrap">${badge ? `<span class="pts-badges">${badge}</span>` : ''}<span class="pts-value">${r.pts}</span></div></td>
+    </tr>`;
+  }).join('');
+
+  return `<table class="standings-table">
+    <thead><tr><th>#</th><th>Tým</th><th class="num">Odstříleno</th><th class="num">V</th><th class="num">R</th><th class="num">P</th><th class="num tally-col">7×</th><th class="num tally-col">6×</th><th class="num tally-col">5×</th><th class="num tally-col">4×</th><th class="num tally-col">3×</th><th class="num tally-col">2×</th><th class="num tally-col">1×</th><th class="num tally-col">0×</th><th class="num">Skóre</th></tr></thead>
+    <tbody>${tbody}</tbody>
+  </table>`;
+}
+
+// Footnote/legend (rendered OUTSIDE the horizontal scroll area)
+function standingsFootnoteHTML(rows) {
+  const ptsCount = {};
+  rows.forEach(r => { ptsCount[r.pts] = (ptsCount[r.pts] || 0) + 1; });
+  const hasTie        = rows.some(r => ptsCount[r.pts] > 1);
+  const hasNumDecided = rows.some(r => r.tieDecidedBy !== null && ptsCount[r.pts] > 1);
+  const hasUndecided  = rows.some(r => r.undecided && ptsCount[r.pts] > 1);
+  if (!hasTie) return '';
+  return `<div class="h2h-note"><span class="h2h-badge">X</span> Shodné skóre – pořadí určeno podle vzájemných soubojů.</div>`
+    + (hasNumDecided ? `<div class="h2h-note"><span class="win-badge">7</span> Shodné skóre i vzájemné souboje – rozhodl počet zásahů dané hodnoty (číslo udává rozhodující hodnotu).</div>` : '')
+    + (hasUndecided ? `<div class="h2h-note"><span class="undecided-badge">?</span> Nelze rozhodnout – týmy jsou shodné ve skóre, vzájemných soubojích i počtu 7,6,5,4,3,2,1,0.</div>` : '');
+}
+
+function makeStandingsLabel(text, color) {
+  const el = document.createElement('div');
+  el.style.cssText = `font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:${color};padding:1.4rem 0 .5rem;`;
+  el.textContent = text;
+  return el;
+}
+
+function makeStandingsCard(rows, extraStyle) {
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.style.cssText = 'padding:0;overflow:hidden;' + (extraStyle||'');
+  // Only the table scrolls horizontally; the footnote stays fixed below it.
+  el.innerHTML = `<div class="standings-scroll">${standingsTableHTML(rows)}</div>${standingsFootnoteHTML(rows)}`;
+  return el;
+}
+
+function renderStandings() {
+  const container = document.getElementById('standingsContainer');
+  container.innerHTML = '';
+
+  const allDone     = state.matches.length > 0 && state.matches.every(m => m.done);
+  const rounds      = [...new Set(state.matches.map(m => m.round))].sort((a,b) => a-b);
+  const multiRound  = rounds.length > 1;
+
+  document.getElementById('standingsSub').textContent =
+    (state.tournamentName ? state.tournamentName + (state.tournamentDate ? ' · '+state.tournamentDate : '') + ' · ' : '') +
+    'Body = celkové skóre. Řazeno podle celkového skóre.';
+
+  // Print-only header
+  document.getElementById('printHeader').innerHTML =
+    `<div class="print-title">${esc(state.tournamentName || 'Závod')}</div>` +
+    (state.tournamentDate ? `<div class="print-date">${esc(state.tournamentDate)}</div>` : '');
+
+  const banner = document.getElementById('championBanner');
+
+  if (multiRound) {
+    const overall = calcStandings();
+    const anyDone = state.matches.some(m => m.done);
+    // Overall total first
+    if (anyDone) {
+      container.appendChild(makeStandingsLabel('Celkový součet', 'var(--accent)'));
+      container.appendChild(makeStandingsCard(overall, 'margin-bottom:.5rem;'));
+    }
+    // Then per-round tables
+    rounds.forEach(r => {
+      const rm = state.matches.filter(m => m.round === r);
+      if (!rm.some(m => m.done)) return;
+      container.appendChild(makeStandingsLabel(`Kolo ${r}${rm.every(m=>m.done)?'':' (probíhá)'}`, 'var(--muted)'));
+      container.appendChild(makeStandingsCard(calcStandings(r), 'margin-bottom:.5rem;'));
+    });
+    if (allDone && anyDone) { showChampion(banner, overall[0]); return; }
+  } else {
+    const overall = calcStandings();
+    container.appendChild(makeStandingsCard(overall));
+    if (allDone && overall.length) { showChampion(banner, overall[0]); return; }
+  }
+  banner.innerHTML = '';
+}
+
+function printStandings() {
+  const name = (state.tournamentName || 'Zavod').trim();
+  const date = (state.tournamentDate || '').trim();
+  // Build a clean filename: "Name - Date" (browser uses document.title as default)
+  const combined = date ? `${name} - ${date}` : name;
+  const original = document.title;
+  document.title = combined;
+  window.print();
+  // Restore after the print dialog (timeout covers async print rendering)
+  setTimeout(() => { document.title = original; }, 1000);
+}
+
+function showChampion(banner, champ) {
+  banner.innerHTML = `<div class="champion-banner">
+    <div class="champion-label">🏆 Vítěz závodu</div>
+    <div class="champion-name">${esc(champ.name)}</div>
+    <div class="champion-players">${esc(champ.p1)} &amp; ${esc(champ.p2)} · ${champ.pts} b</div>
+  </div>`;
+}
+
+// ─────────────────────────────────────────────
+//  TEAM EDITOR
+// ─────────────────────────────────────────────
+function saveTeamEdit(idx, field, value) {
+  if (!T()) return;
+  const v = value.trim();
+  if (v) T().teams[idx][field] = v;
+  saveAll();
+  if (!document.getElementById('view-standings').classList.contains('hidden')) renderStandings();
+}
+
+function openTeamEditor(tid, e) {
+  if (e) e.stopPropagation();
+  const existing = document.getElementById('teamEditorInline');
+  if (existing) {
+    const sameOne = existing.dataset.tid === tid;
+    const prev = existing.previousElementSibling;
+    if (prev && prev.classList.contains('editing-open')) prev.classList.remove('editing-open');
+    existing.remove();
+    if (sameOne) return;   // clicking the same pencil again just closes it
+  }
+
+  activeTournamentId = tid;
+  renderTournamentCards();
+  const t = T(); if (!t) return;
+
+  const el = document.createElement('div');
+  el.id = 'teamEditorInline'; el.dataset.tid = tid; el.className = 'card team-editor-box';
+  el.innerHTML =
+    `<div class="team-editor-head">
+      <span class="team-editor-title">Upravit týmy — ${esc(t.name)}</span>
+      <button class="btn btn-secondary btn-sm" onclick="closeTeamEditor()">Hotovo</button>
+    </div>
+    <div id="teamEditorGrid" class="teams-grid"></div>`;
+
+  const cards = document.querySelectorAll('#tournamentCards .tournament-card');
+  let inserted = false;
+  cards.forEach(card => {
+    if (card.querySelector(`[data-tid="${tid}"]`)) {
+      card.classList.add('editing-open');
+      card.after(el);
+      inserted = true;
+    }
+  });
+  if (!inserted) document.getElementById('tournamentCards').appendChild(el);
+
+  renderTeamEditor();
+  el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function closeTeamEditor() {
+  const el = document.getElementById('teamEditorInline');
+  if (el) {
+    const prev = el.previousElementSibling;
+    if (prev && prev.classList.contains('editing-open')) prev.classList.remove('editing-open');
+    el.remove();
+  }
+}
+
+function renderTeamEditor() {
+  const grid = document.getElementById('teamEditorGrid');
+  if (!grid || !T()) return;
+  grid.innerHTML = '';
+  T().teams.forEach((t, i) => {
+    const card = document.createElement('div');
+    card.className = 'team-card'; card.id = 'tec_'+i;
+    card.innerHTML = teamEditorRowHTML(t, i, false);
+    grid.appendChild(card);
+  });
+}
+
+function teamEditorRowHTML(t, i, unlocked) {
+  function field(id, val, fieldName) {
+    return unlocked
+      ? `<input class="team-name-editable" type="text" id="${id}" value="${esc(val)}" data-idx="${i}" data-field="${fieldName}" onblur="saveTeamEdit(+this.dataset.idx,this.dataset.field,this.value)">`
+      : `<span class="te-value">${esc(val)}</span>`;
+  }
+  const lockBtn = unlocked
+    ? `<button class="te-lock-btn te-unlocked" onclick="lockTeamRow(${i})" title="Lock">&#128274;</button>`
+    : `<button class="te-lock-btn" onclick="unlockTeamRow(${i})" title="Edit">&#9998;</button>`;
+
+  return `<div style="display:flex;align-items:flex-start;gap:.6rem;">
+    <div style="flex:1;">
+      <div class="team-number">Tým ${i+1}</div>
+      <div class="team-fields">
+        <div><label>Název týmu</label>${field('tef_name_'+i, t.name, 'name')}</div>
+        <div><label>Člen 1</label>${field('tef_p1_'+i,   t.p1,  'p1'  )}</div>
+        <div><label>Člen 2</label>${field('tef_p2_'+i,   t.p2,  'p2'  )}</div>
+      </div>
+    </div>
+    <div style="padding-top:1.6rem;">${lockBtn}</div>
+  </div>`;
+}
+
+function unlockTeamRow(i) {
+  if (!T()) return;
+  const card = document.getElementById('tec_'+i);
+  if (card) { card.innerHTML = teamEditorRowHTML(T().teams[i], i, true); document.getElementById('tef_name_'+i)?.focus(); }
+}
+
+function lockTeamRow(i) {
+  if (!T()) return;
+  ['name','p1','p2'].forEach(f => {
+    const el = document.getElementById(`tef_${f}_${i}`);
+    if (el) saveTeamEdit(i, f, el.value);
+  });
+  document.getElementById('tec_'+i)?.innerHTML !== undefined &&
+    (document.getElementById('tec_'+i).innerHTML = teamEditorRowHTML(T().teams[i], i, false));
+}
+
+// ─────────────────────────────────────────────
+//  EXPORT / IMPORT (per tournament)
+// ─────────────────────────────────────────────
+function slugify(s) {
+  return String(s).toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // strip diacritics
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'zavod';
+}
+
+function exportTournament(id, e) {
+  if (e) e.stopPropagation();
+  const t = tournaments.find(x => x.id === id);
+  if (!t) return;
+
+  // Record how many matches were done at this backup (for the staleness indicator)
+  t.lastBackupDone = t.matches.filter(m => m.done).length;
+
+  // timestamp: YYYY-MM-DD-HHMM
+  const d = new Date();
+  const ts = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}`;
+  const filename = `${slugify(t.name)}-zaloha-${ts}.json`;
+
+  const payload = {
+    type: 'shootcomp-tournament',
+    version: 1,
+    exportedAt: d.toISOString(),
+    tournament: t
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+  saveAll();
+  updateBackupIndicator();
+}
+
+// Soubojů completed since the last export of the active tournament
+function matchesSinceBackup() {
+  const t = T();
+  if (!t) return 0;
+  const done = t.matches.filter(m => m.done).length;
+  const last = (typeof t.lastBackupDone === 'number') ? t.lastBackupDone : 0;
+  return Math.max(0, done - last);
+}
+
+function updateBackupIndicator() {
+  const el = document.getElementById('backupIndicator');
+  if (!el) return;
+  const t = T();
+  if (!t) { el.style.display = 'none'; return; }
+  el.style.display = '';
+
+  const since = matchesSinceBackup();
+  const everBacked = (typeof t.lastBackupDone === 'number');
+
+  el.classList.remove('bi-ok', 'bi-warn', 'bi-stale');
+  if (!everBacked) {
+    el.textContent = 'Bez zálohy';
+    el.classList.add('bi-warn');
+  } else if (since === 0) {
+    el.textContent = 'Zálohováno ✓';
+    el.classList.add('bi-ok');
+  } else if (since < 5) {
+    el.textContent = `Záloha: před ${since} ${since === 1 ? 'soubojem' : 'souboji'}`;
+    el.classList.add('bi-warn');
+  } else {
+    el.textContent = `⚠ Záloha: před ${since} souboji`;
+    el.classList.add('bi-stale');
+  }
+}
+
+function importTournamentFile(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async () => {
+    input.value = '';   // reset so the same file can be re-imported later
+    let data;
+    try { data = JSON.parse(reader.result); }
+    catch { await confirmDialog('Soubor nelze přečíst (neplatný JSON).', 'OK'); return; }
+
+    const t = data && data.tournament ? data.tournament
+            : (data && data.id && data.teams ? data : null);
+    if (!t || !t.id || !Array.isArray(t.teams) || !Array.isArray(t.matches)) {
+      await confirmDialog('Tento soubor neobsahuje platný závod.', 'OK');
+      return;
+    }
+
+    const existing = tournaments.find(x => x.id === t.id);
+    if (existing) {
+      const ok = await confirmDialog(`Závod „${t.name}" už existuje. Přepsat ho importovanými daty?`, 'Přepsat');
+      if (!ok) return;
+      Object.assign(existing, t);
+    } else {
+      tournaments.push(t);
+    }
+    activeTournamentId = t.id;
+    renderTournamentCards();
+    saveAll();
+    if (t.phase !== 'setup') { enableTabs(); updateHeaderPhase('Souboje'); }
+  };
+  reader.readAsText(file);
+}
+
+// ─────────────────────────────────────────────
+//  PERSIST
+// ─────────────────────────────────────────────
+function save() { saveAll(); }
+
+function saveAll() {
+  try {
+    localStorage.setItem('shootcomp_tournaments', JSON.stringify(tournaments));
+    localStorage.setItem('shootcomp_active', activeTournamentId || '');
+  } catch(e) {}
+}
+
+function loadSaved() {
+  try {
+    const raw = localStorage.getItem('shootcomp_tournaments');
+    if (raw) {
+      tournaments = JSON.parse(raw);
+      activeTournamentId = localStorage.getItem('shootcomp_active') || null;
+      if (activeTournamentId && !tournaments.some(t => t.id === activeTournamentId)) activeTournamentId = null;
+      return true;
+    }
+    // Migrate old single-tournament format
+    const oldRaw = localStorage.getItem('shootcomp_state');
+    if (oldRaw) {
+      const old = JSON.parse(oldRaw);
+      if (old.teams?.length) {
+        const t = {id:newId(), name:old.tournamentName||'Tournament', date:old.tournamentDate||'', teams:old.teams, matches:old.matches||[], totalRounds:old.totalRounds||1, phase:old.phase||'matches'};
+        tournaments = [t]; activeTournamentId = t.id;
+        saveAll(); return true;
+      }
+    }
+  } catch(e) {}
+  return false;
+}
+
+// ─────────────────────────────────────────────
+//  THEME
+// ─────────────────────────────────────────────
+function toggleTheme() {
+  const light = document.body.classList.toggle('light');
+  document.getElementById('themeIcon').textContent  = light ? '🌙' : '☀️';
+  document.getElementById('themeLabel').textContent = light ? 'Tmavý' : 'Světlý';
+  try { localStorage.setItem('shootcomp_theme', light ? 'light' : 'dark'); } catch(e) {}
+}
+
+function loadTheme() {
+  try {
+    if (localStorage.getItem('shootcomp_theme') === 'dark') {
+      document.body.classList.remove('light');
+      document.getElementById('themeIcon').textContent  = '☀️';
+      document.getElementById('themeLabel').textContent = 'Světlý';
+    }
+  } catch(e) {}
+}
+
+// ─────────────────────────────────────────────
+//  ABOUT
+// ─────────────────────────────────────────────
+const APP_VERSION = '1.0';
+const APP_DATE = '16.06.2026';
+
+async function openAbout() {
+  document.getElementById('aboutVersion').textContent = APP_VERSION;
+  document.getElementById('aboutDate').textContent = APP_DATE;
+
+  // Saved tournaments count
+  document.getElementById('aboutCount').textContent = String(tournaments.length);
+
+  // Persistent storage status
+  let persist = 'Nepodporováno';
+  try {
+    if (navigator.storage && navigator.storage.persisted) {
+      persist = (await navigator.storage.persisted()) ? 'Ano' : 'Ne';
+    }
+  } catch (e) {}
+  document.getElementById('aboutPersist').textContent = persist;
+
+  // Update button only meaningful when hosted (https)
+  const area = document.getElementById('aboutUpdateArea');
+  area.style.display = (location.protocol === 'https:') ? '' : 'none';
+  document.getElementById('aboutUpdateStatus').textContent = '';
+
+  document.getElementById('aboutModal').classList.add('active');
+}
+
+function closeAbout() {
+  document.getElementById('aboutModal').classList.remove('active');
+}
+
+async function checkForUpdate() {
+  const status = document.getElementById('aboutUpdateStatus');
+  const btn = document.getElementById('aboutUpdateBtn');
+  if (!navigator.onLine) { status.textContent = 'Jste offline – aktualizaci nelze ověřit.'; return; }
+  if (!('serviceWorker' in navigator)) { status.textContent = 'Aktualizace nejsou podporovány.'; return; }
+  btn.disabled = true;
+  status.textContent = 'Kontroluji…';
+  try {
+    const reg = await navigator.serviceWorker.getRegistration();
+    if (!reg) { status.textContent = 'Aplikace zatím není nainstalovaná.'; btn.disabled = false; return; }
+    await reg.update();
+    // If a new worker is installing/waiting, an update exists
+    if (reg.installing || reg.waiting) {
+      status.textContent = 'Nová verze je k dispozici. Zavřete a znovu otevřete aplikaci pro dokončení.';
+    } else {
+      status.textContent = 'Máte nejnovější verzi.';
+    }
+  } catch (e) {
+    status.textContent = 'Kontrolu se nepodařilo provést.';
+  }
+  btn.disabled = false;
+}
+
+// ─────────────────────────────────────────────
+//  CONFIRM MODAL
+// ─────────────────────────────────────────────
+function confirmDialog(message, okLabel = 'Smazat') {
+  // okLabel 'OK' => single-button info dialog (no Cancel, neutral OK button)
+  const alertOnly = okLabel === 'OK';
+  return new Promise(resolve => {
+    const overlay = document.getElementById('confirmModal');
+    const msgEl   = document.getElementById('confirmModalMsg');
+    const okBtn   = document.getElementById('confirmModalOk');
+    const cancel  = document.getElementById('confirmModalCancel');
+    msgEl.textContent = message;
+    okBtn.textContent = okLabel;
+    cancel.style.display = alertOnly ? 'none' : '';
+    okBtn.classList.toggle('btn-danger', !alertOnly);
+    okBtn.classList.toggle('btn-primary', alertOnly);
+    overlay.classList.add('active');
+
+    function cleanup(result) {
+      overlay.classList.remove('active');
+      okBtn.removeEventListener('click', onOk);
+      cancel.removeEventListener('click', onCancel);
+      overlay.removeEventListener('click', onBackdrop);
+      // restore default button styling
+      okBtn.classList.remove('btn-primary'); okBtn.classList.add('btn-danger');
+      cancel.style.display = '';
+      resolve(result);
+    }
+    function onOk()       { cleanup(true); }
+    function onCancel()   { cleanup(false); }
+    function onBackdrop(e){ if (e.target === overlay) cleanup(alertOnly ? true : false); }
+
+    okBtn.addEventListener('click', onOk);
+    cancel.addEventListener('click', onCancel);
+    overlay.addEventListener('click', onBackdrop);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  SCORE INPUT FILTER (allow only a single digit 0–7)
+// ─────────────────────────────────────────────
+function filterScore(el) {
+  // Keep only digits, take the last typed one, clamp to 0–7
+  let v = el.value.replace(/[^0-9]/g, '');
+  if (v.length > 1) v = v.slice(-1);        // single digit only
+  if (v !== '' && parseInt(v) > 7) v = '7'; // clamp max
+  el.value = v;
+}
+
+// ─────────────────────────────────────────────
+//  UTILITIES
+// ─────────────────────────────────────────────
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function pad(n) { return String(n).padStart(2,'0'); }
+function showAlert(id, msg) { const el=document.getElementById(id); el.textContent=msg; el.classList.add('show'); }
+function hideAlert(id) { document.getElementById(id).classList.remove('show'); }
+function updateHeaderPhase(txt) { document.getElementById('headerPhase').innerHTML=`<span class="dot"></span>${txt}`; }
+
+// ─────────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  loadTheme();
+  loadSaved();
+  renderTournamentCards();
+  if (T() && T().phase !== 'setup') {
+    enableTabs(); updateHeaderPhase('Souboje'); switchTab('matches');
+  }
+  initPWA();
+  requestPersistentStorage();
+});
+
+// ─────────────────────────────────────────────
+//  Ask the browser to keep our data persistent (best-effort).
+//  Safe everywhere: feature-detected and wrapped in try/catch, so it
+//  silently does nothing on file:// or unsupported browsers.
+// ─────────────────────────────────────────────
+async function requestPersistentStorage() {
+  try {
+    if (navigator.storage && navigator.storage.persist) {
+      const already = await navigator.storage.persisted();
+      if (!already) await navigator.storage.persist();
+    }
+  } catch (e) {}
+}
+
+// ─────────────────────────────────────────────
+//  PWA — only active when served over https (e.g. GitHub Pages).
+//  Opening the file locally via file:// skips this entirely.
+// ─────────────────────────────────────────────
+function initPWA() {
+  if (location.protocol !== 'https:' || !('serviceWorker' in navigator)) return;
+  // Inject manifest link (so a standalone local HTML never requests it)
+  const link = document.createElement('link');
+  link.rel = 'manifest';
+  link.href = 'manifest.json';
+  document.head.appendChild(link);
+  // iOS home-screen icon (iOS ignores manifest icons)
+  const touch = document.createElement('link');
+  touch.rel = 'apple-touch-icon';
+  touch.href = 'apple-touch-icon.png';
+  document.head.appendChild(touch);
+  // Register service worker for offline caching
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>
