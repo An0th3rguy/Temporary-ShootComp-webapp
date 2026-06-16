@@ -378,7 +378,11 @@
 
   /* ── ABOUT MODAL ── */
   .about-box { max-width:420px; text-align:left; }
-  .about-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; }
+  .about-head {
+    display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;
+    position:sticky; top:-1.6rem; background:var(--surface);
+    padding-top:.4rem; margin-top:-.4rem; z-index:1;
+  }
   .about-title { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.12em; color:var(--accent); }
   .about-title span { color:var(--text); }
   .about-desc { font-size:.9rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem; }
@@ -393,12 +397,14 @@
   .modal-overlay {
     display:none; position:fixed; inset:0; z-index:300;
     background:rgba(0,0,0,.6); align-items:center; justify-content:center; padding:1.5rem;
+    overflow-y:auto;
     -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);
   }
   .modal-overlay.active { display:flex; }
   .modal-box {
     background:var(--surface); border:1px solid var(--border); border-radius:6px;
     padding:1.6rem 1.6rem 1.3rem; max-width:380px; width:100%;
+    max-height:calc(100vh - 3rem); overflow-y:auto;
     box-shadow:0 12px 48px rgba(0,0,0,.4);
   }
   .modal-msg { font-size:1rem; line-height:1.5; color:var(--text); margin-bottom:1.4rem; }
@@ -1649,7 +1655,7 @@ function loadTheme() {
 // ─────────────────────────────────────────────
 //  ABOUT
 // ─────────────────────────────────────────────
-const APP_VERSION = '1.0.1';
+const APP_VERSION = '1.0.0';
 const APP_DATE = '16.06.2026';
 
 async function openAbout() {
