@@ -4,7 +4,7 @@
 // Bump the version string below (v1 → v2 → v3 ...) every time you
 // push changes to GitHub. The new version triggers deletion of the
 // old cache and a fresh download on the next online visit.
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v1.0.1';
 const CACHE_NAME = 'shootcomp-' + CACHE_VERSION;
 
 // Pre-cache the app shell on install.
