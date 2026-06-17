@@ -1655,8 +1655,8 @@ function loadTheme() {
 // ─────────────────────────────────────────────
 //  ABOUT
 // ─────────────────────────────────────────────
-const APP_VERSION = '1.0.3';
-const APP_DATE = '17.06.2026';
+const APP_VERSION = '1.0.0';
+const APP_DATE = '16.06.2026';
 
 async function openAbout() {
   document.getElementById('aboutVersion').textContent = APP_VERSION;
@@ -1701,13 +1701,25 @@ function closeAbout() {
   document.getElementById('aboutModal').classList.remove('active');
 }
 
+let updateTapCount = 0;
+let updateTapTimer = null;
+
 async function checkForUpdate() {
   const status = document.getElementById('aboutUpdateStatus');
   const btn = document.getElementById('aboutUpdateBtn');
   if (!navigator.onLine) { status.textContent = 'Jste offline – aktualizaci nelze ověřit.'; return; }
   if (!('serviceWorker' in navigator)) { status.textContent = 'Aktualizace nejsou podporovány.'; return; }
+
+  // Hidden escape hatch: 5 taps within a few seconds forces a refresh even if
+  // no new version is detected (use when an update appears stuck).
+  updateTapCount++;
+  clearTimeout(updateTapTimer);
+  updateTapTimer = setTimeout(() => { updateTapCount = 0; }, 3000);
+  const forceRefresh = updateTapCount >= 5;
+  if (forceRefresh) updateTapCount = 0;
+
   btn.disabled = true;
-  status.textContent = 'Kontroluji…';
+  status.textContent = forceRefresh ? 'Vynucuji obnovení…' : 'Kontroluji…';
   try {
     const reg = await navigator.serviceWorker.getRegistration();
     if (!reg) { status.textContent = 'Aplikace zatím není nainstalovaná.'; btn.disabled = false; return; }
@@ -1717,14 +1729,14 @@ async function checkForUpdate() {
     await reg.update();
 
     const hasNewVersion = !!(reg.installing || reg.waiting);
-    if (!hasNewVersion) {
+    if (!hasNewVersion && !forceRefresh) {
       status.textContent = 'Máte nejnovější verzi.';
       btn.disabled = false;
       return;
     }
 
-    // New version found → force-refresh the cached files, then reload.
-    status.textContent = 'Stahuji nejnovější verzi…';
+    // New version found (or forced) → force-refresh the cached files, then reload.
+    status.textContent = forceRefresh ? 'Vynucuji stažení nové verze…' : 'Stahuji nejnovější verzi…';
 
     // When the SW signals it has refreshed the cache, reload the page.
     const onMsg = (event) => {
