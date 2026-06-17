@@ -4,7 +4,7 @@
 // Bump the version string below (v1.0.0 → v1.0.1 → v1.1.0 ...) every time you
 // push changes to GitHub. The new version triggers deletion of the
 // old cache and a fresh download on the next online visit.
-const CACHE_VERSION = 'v1.0.2';
+const CACHE_VERSION = 'v1.0.0';
 const CACHE_NAME = 'shootcomp-' + CACHE_VERSION;
 
 // Pre-cache the app shell on install.
@@ -30,6 +30,27 @@ self.addEventListener('activate', (event) => {
             .map((k) => caches.delete(k))
       )
     ).then(() => self.clients.claim())
+  );
+});
+
+// Message handler: force-refresh the cached app shell from the network.
+// Triggered by the "check for updates" button once a new version is found.
+self.addEventListener('message', (event) => {
+  if (!event.data || event.data.type !== 'REFRESH_CACHE') return;
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const urls = ['./', './index.html', './manifest.json', './apple-touch-icon.png'];
+      await Promise.allSettled(urls.map(async (url) => {
+        try {
+          // cache:'reload' bypasses the HTTP cache so we get fresh files
+          const resp = await fetch(url, { cache: 'reload' });
+          if (resp && resp.ok) await cache.put(url, resp.clone());
+        } catch (e) {}
+      }));
+      // Tell the page we're done so it can reload
+      const clients = await self.clients.matchAll();
+      clients.forEach((c) => c.postMessage({ type: 'CACHE_REFRESHED' }));
+    })
   );
 });
 

@@ -1655,7 +1655,7 @@ function loadTheme() {
 // ─────────────────────────────────────────────
 //  ABOUT
 // ─────────────────────────────────────────────
-const APP_VERSION = '1.0.1';
+const APP_VERSION = '1.0.0';
 const APP_DATE = '16.06.2026';
 
 async function openAbout() {
@@ -1711,17 +1711,46 @@ async function checkForUpdate() {
   try {
     const reg = await navigator.serviceWorker.getRegistration();
     if (!reg) { status.textContent = 'Aplikace zatím není nainstalovaná.'; btn.disabled = false; return; }
+
+    // Re-check sw.js against the network. If the version was bumped, the browser
+    // starts installing a new worker (appears as installing/waiting).
     await reg.update();
-    // If a new worker is installing/waiting, an update exists
-    if (reg.installing || reg.waiting) {
-      status.textContent = 'Nová verze je k dispozici. Zavřete a znovu otevřete aplikaci pro dokončení.';
-    } else {
+
+    const hasNewVersion = !!(reg.installing || reg.waiting);
+    if (!hasNewVersion) {
       status.textContent = 'Máte nejnovější verzi.';
+      btn.disabled = false;
+      return;
     }
+
+    // New version found → force-refresh the cached files, then reload.
+    status.textContent = 'Stahuji nejnovější verzi…';
+
+    // When the SW signals it has refreshed the cache, reload the page.
+    const onMsg = (event) => {
+      if (event.data && event.data.type === 'CACHE_REFRESHED') {
+        navigator.serviceWorker.removeEventListener('message', onMsg);
+        status.textContent = 'Hotovo, načítám…';
+        location.reload();
+      }
+    };
+    navigator.serviceWorker.addEventListener('message', onMsg);
+
+    // Ask whichever worker is active (or the new one) to refresh the cache.
+    const target = navigator.serviceWorker.controller || reg.active || reg.waiting || reg.installing;
+    if (target) {
+      target.postMessage({ type: 'REFRESH_CACHE' });
+    } else {
+      status.textContent = 'Nová verze je připravena. Zavřete a znovu otevřete aplikaci.';
+      btn.disabled = false;
+    }
+
+    // Safety fallback: if no confirmation arrives in 8s, reload anyway.
+    setTimeout(() => { location.reload(); }, 8000);
   } catch (e) {
     status.textContent = 'Kontrolu se nepodařilo provést.';
+    btn.disabled = false;
   }
-  btn.disabled = false;
 }
 
 // ─────────────────────────────────────────────
