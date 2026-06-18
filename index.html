@@ -125,6 +125,15 @@
   .team-count-row > div { flex:0 0 auto; }
   .teams-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
   .team-card { background:var(--surface2); border:1px solid var(--border); border-radius:4px; padding:1.2rem; }
+  .team-card-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:.8rem; }
+  .team-card-head .team-number { margin-bottom:0; }
+  .team-remove {
+    background:none; border:1px solid var(--border); border-radius:50%;
+    width:1.5rem; height:1.5rem; line-height:1; font-size:1rem;
+    color:var(--muted); cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
+    transition:border-color .2s, color .2s; flex-shrink:0;
+  }
+  .team-remove:hover { border-color:var(--accent2); color:var(--accent2); }
   .team-number { font-family:'Bebas Neue',sans-serif; font-size:.9rem; letter-spacing:.15em; color:var(--accent); margin-bottom:.8rem; }
   .team-fields { display:flex; flex-direction:column; gap:.6rem; }
 
@@ -560,9 +569,10 @@
       <div class="team-count-row" style="margin-bottom:1rem;">
         <div><label>Počet týmů</label><input type="number" id="teamCount" value="4" min="2" max="40" style="width:7rem"></div>
         <div><label>Počet kol</label><input type="number" id="roundCount" value="1" min="1" max="20" style="width:7rem"></div>
-        <button class="btn btn-secondary btn-sm" onclick="generateTeamInputs()">Generovat týmy</button>
+        <button class="btn btn-secondary btn-sm" onclick="regenerateTeamInputs()">Generovat týmy</button>
       </div>
       <div id="teamsContainer" class="teams-grid"></div>
+      <button class="btn btn-secondary btn-sm add-team-btn" onclick="addTeamInput()" style="margin-top:.8rem;">+ Přidat tým</button>
       <div class="mt-2 flex gap-1">
         <button class="btn btn-primary" id="formStartBtn" onclick="startTournament()">Spustit závod →</button>
         <button class="btn btn-secondary" onclick="hideTournamentForm()">Zrušit</button>
@@ -673,17 +683,66 @@ function generateTeamInputs(existing = []) {
   const n = parseInt(document.getElementById('teamCount').value) || 4;
   if (n < 2 || n > 40) { showAlert('alertSetup','Počet týmů musí být 2–40.'); return; }
   hideAlert('alertSetup');
-  document.getElementById('teamsContainer').innerHTML = Array.from({length:n}, (_, i) => {
-    const p = existing[i] || {};
-    return `<div class="team-card">
-      <div class="team-number">Tým ${i+1}</div>
+  renderTeamInputs(Array.from({length:n}, (_, i) => existing[i] || {}));
+}
+
+// Render team cards from an array of {name,p1,p2} objects.
+function renderTeamInputs(list) {
+  document.getElementById('teamsContainer').innerHTML = list.map((p, i) => `
+    <div class="team-card">
+      <div class="team-card-head">
+        <div class="team-number">Tým ${i+1}</div>
+        <button class="team-remove" onclick="removeTeamInput(${i})" title="Odebrat tým" aria-label="Odebrat tým">&times;</button>
+      </div>
       <div class="team-fields">
         <div><label>Název týmu</label><input type="text" id="tname_${i}" placeholder="Tým ${i+1}" value="${esc(p.name||'')}"></div>
         <div><label>Člen 1</label><input type="text" id="tp1_${i}"   placeholder="Jméno střelce"  value="${esc(p.p1  ||'')}"></div>
         <div><label>Člen 2</label><input type="text" id="tp2_${i}"   placeholder="Jméno střelce"  value="${esc(p.p2  ||'')}"></div>
       </div>
-    </div>`;
-  }).join('');
+    </div>`).join('');
+}
+
+// Read whatever is currently typed into the team cards (without defaults).
+function readCurrentInputs() {
+  const list = [];
+  for (let i = 0; document.getElementById(`tname_${i}`) !== null; i++) {
+    list.push({
+      name: document.getElementById(`tname_${i}`).value,
+      p1:   document.getElementById(`tp1_${i}`).value,
+      p2:   document.getElementById(`tp2_${i}`).value,
+    });
+  }
+  return list;
+}
+
+// "Generovat týmy" — resize to the count box WITHOUT wiping already-typed names.
+function regenerateTeamInputs() {
+  const n = parseInt(document.getElementById('teamCount').value) || 4;
+  if (n < 2 || n > 40) { showAlert('alertSetup','Počet týmů musí být 2–40.'); return; }
+  const current = readCurrentInputs();
+  const list = Array.from({length:n}, (_, i) => current[i] || {});
+  renderTeamInputs(list);
+}
+
+// "+ Přidat tým" — append one more team, keeping all typed names (e.g. a late arrival).
+function addTeamInput() {
+  const current = readCurrentInputs();
+  if (current.length >= 40) { showAlert('alertSetup','Maximální počet týmů je 40.'); return; }
+  current.push({});
+  document.getElementById('teamCount').value = current.length;
+  renderTeamInputs(current);
+  // focus the new team's name field
+  const idx = current.length - 1;
+  setTimeout(() => document.getElementById(`tname_${idx}`)?.focus(), 50);
+}
+
+// Remove one team card, keeping the rest of the typed names.
+function removeTeamInput(index) {
+  const current = readCurrentInputs();
+  if (current.length <= 2) { showAlert('alertSetup','Potřebujete alespoň 2 týmy.'); return; }
+  current.splice(index, 1);
+  document.getElementById('teamCount').value = current.length;
+  renderTeamInputs(current);
 }
 
 function readTeamsFromForm(n) {
@@ -695,7 +754,7 @@ function readTeamsFromForm(n) {
 }
 
 function startTournament() {
-  const n      = parseInt(document.getElementById('teamCount').value) || 4;
+  const n      = readCurrentInputs().length || parseInt(document.getElementById('teamCount').value) || 4;
   const teams  = readTeamsFromForm(n);
   if (teams.length < 2) { showAlert('alertSetup','Potřebujete alespoň 2 týmy.'); return; }
 
